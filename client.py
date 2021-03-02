@@ -1,7 +1,8 @@
-
-
 import socket
 
+# hostname = socket.gethostname()
+# local_ip = socket.gethostbyname(hostname)
+# print(local_ip)
 
 def Main():
     hostname = socket.gethostname()
@@ -21,8 +22,9 @@ def Main():
         data = data.decode('utf-8')
         print("Received from server: " + data)
         message = input("-> ")
-    s.close()
 
+    s.sendto(message.encode('utf-8'), server)
+    s.close()
 
 if __name__ == '__main__':
     Main()

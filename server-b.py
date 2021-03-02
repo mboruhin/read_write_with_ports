@@ -3,6 +3,7 @@ import socket
 def Main():
     hostname = socket.gethostname()
     host = socket.gethostbyname(hostname)  # '192.168.0.12'  # Server ip
+    print(str(host))
     port = 4100
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
