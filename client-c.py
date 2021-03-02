@@ -12,7 +12,7 @@ def Main():
     server = ('10.42.132.16', 4100)
 
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    # s.bind((host, port))
+    #s.bind((host, port))
 
     message = input("-> ")
     while message != 'q':
