@@ -10,7 +10,6 @@ def Main():
     s.bind((host, port))
 
     print("Server Started")
-    data = None
     while True:
         data, addr = s.recvfrom(1024)
         data = data.decode('utf-8')
