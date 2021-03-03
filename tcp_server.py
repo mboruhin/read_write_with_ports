@@ -16,7 +16,7 @@ def foo(client):
     while True:
         inbytes = client.recv(1024)
         if inbytes:
-            outbytes = bytes(str(inbytes).upper())
+            outbytes = inbytes.upper()
             print("sending:", outbytes)
             client.send(outbytes)
         else:
