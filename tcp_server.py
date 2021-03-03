@@ -17,8 +17,13 @@ def foo(client):
         inbytes = client.recv(1024)
         if inbytes:
             outbytes = bytes(str(inbytes).upper())
+            print("sending:", outbytes)
             client.send(outbytes)
+        else:
+            break
+
 
 
 if __name__ == '__main__':
+    print('starting TCP server')
     tcp_server()
