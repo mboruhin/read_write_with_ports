@@ -1,8 +1,8 @@
 import sys
 from socket import *
 
-# server_ip = '10.42.132.16'  # WW machine
-server_ip = '192.168.1.14'  # home machine
+server_ip = '10.42.132.16'  # WW machine
+# server_ip = '192.168.1.14'  # home machine
 
 if len(sys.argv) < 2:
     sys.stderr.write("usage: %s host service args...\n" % sys.argv[0])

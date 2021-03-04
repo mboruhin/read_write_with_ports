@@ -21,6 +21,7 @@ def foo(client):
             print("sending:", outbytes)
             client.send(outbytes)
         else:
+            print("breaking")
             break
 
 
