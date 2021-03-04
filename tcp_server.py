@@ -8,6 +8,7 @@ def tcp_server():
 
     while True:
         client, addr = s.accept()
+        print("server received message from:", client, addr)
         foo(client)
         client.close()
 
@@ -21,7 +22,6 @@ def foo(client):
             client.send(outbytes)
         else:
             break
-
 
 
 if __name__ == '__main__':
